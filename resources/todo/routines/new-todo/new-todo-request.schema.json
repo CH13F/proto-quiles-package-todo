@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "TNewTodoRequest",
+  "description": "Request message for the new-todo routine.",
+  "type": "object",
+  "properties": {
+    "text": {
+      "description": "The todo entry text",
+      "type": "string",
+      "maxLength": 512,
+      "minLength": 1
+    },
+    "responseUrl": {
+      "description": "The callback URL",
+      "type": "string",
+      "pattern": "^[-a-zA-Z0-9@:%_\\+.~#?&//=]{2,256}\\.[a-zA-Z]{2,4}\b(\\/[-a-zA-Z0-9@:%_\\+.~#?&//=]*)?$"
+    }
+  },
+  "required": ["text", "responseUrl"]
+}
