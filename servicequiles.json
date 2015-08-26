@@ -1,0 +1,10 @@
+{
+  "$schema": "http://quiles.io/v0.0.1/service/schema#",
+  "url": "http://todo.services.my-company.com",
+  "name": "todo",
+  "resources": [
+      {
+        "url": "resources/todo/todo.resourcequiles.json"
+      }
+    ]
+}
