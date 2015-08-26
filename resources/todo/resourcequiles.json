@@ -2,28 +2,35 @@
   "$schema": "http://quiles.io/v0.0.1/resource/schema#",
   "url": "resources/todo",
   "name": "todo",
-  "schema": { "$ref": "/resources/todo/todo.schema.json" },
+  "schema": { "$ref": "todo.schema.json" },
   "version": "v0.1.0",
   "routines": [
-    {
-      "uri": "/resources/todo/routines/new-todo",
-      "description": {"$ref": "/resources/todo/routines/new-todo#"}
+    "routines/new-todo/",
+    "routines/set-todo/",
+    "routines/get-todo/",
+    "routines/remove-todo/",
+    "routines/purge-todo/"
+  ],
+  "messages": {
+    "POST": {
+      "routine": "new-todo",
+      "request": { "action": "request" },
+      "response": { "action": "result", "mode": "notify" }
     },
-    {
-      "uri": "/resources/todo/routines/set-todo",
-      "description": {"$ref": "/resources/todo/routines/set-todo#"}
+    "GET": {
+      "routine": "get-todo",
+      "request": { "action": "request" },
+      "response": { "action": "result" }
     },
-    {
-      "uri": "/resources/todo/routines/get-todo",
-      "description": {"$ref": "/resources/todo/routines/get-todo#"}
+    "PATCH": {
+      "routine": "set-todo",
+      "request": { "action": "request", "mode": "patch" },
+      "response": { "action": "result", "mode": "notify" }
     },
-    {
-      "uri": "/resources/todo/routines/remove-todo",
-      "description": {"$ref": "/resources/todo/routines/remove-todo#"}
-    },
-    {
-      "uri": "/resources/todo/routines/purge-todo",
-      "description": {"$ref": "/resources/todo/routines/purge-todo#"}
+    "DELETE": {
+      "routine": "remove-todo",
+      "request": { "action": "request" },
+      "response": { "action": "result", "mode": "notify" }
     }
-   ]
+  }
 }

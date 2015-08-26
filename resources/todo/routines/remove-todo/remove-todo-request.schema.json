@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  
+  "title": "IRemoveTodo",
+  "description": "Request to return TODO objects",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for an entry.",
+      "type": "string"
+    }
+  },
+  "required": [ "id" ]
+}

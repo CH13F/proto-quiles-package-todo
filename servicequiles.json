@@ -3,8 +3,6 @@
   "url": "http://todo.services.my-company.com",
   "name": "todo",
   "resources": [
-      {
-        "url": "resources/todo/todo.resourcequiles.json"
-      }
+      "resources/todo/"
     ]
 }
