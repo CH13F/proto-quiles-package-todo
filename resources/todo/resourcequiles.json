@@ -13,20 +13,24 @@
   ],
   "messages": {
     "POST": {
-      "request": { "routine": "new", "action": "request" },
-      "response": { "event": "added" }
+      "routine": "new-todo",
+      "request": { "action": "request" },
+      "response": { "action": "result", "mode": "notify" }
     },
     "GET": {
-      "request": { "routine": "get" },
-      "response": { "resource": true }
+      "routine": "get-todo",
+      "request": { "action": "request" },
+      "response": { "action": "result" }
     },
     "PATCH": {
-      "request": { "routine": "set" },
-      "response": { "event": "changed" }
+      "routine": "set-todo",
+      "request": { "action": "request", "mode": "patch" },
+      "response": { "action": "result", "mode": "notify" }
     },
     "DELETE": {
-      "request": { "routine": "remove" },
-      "response": { "event": "removed" }
+      "routine": "remove-todo",
+      "request": { "action": "request" },
+      "response": { "action": "result", "mode": "notify" }
     }
   }
 }

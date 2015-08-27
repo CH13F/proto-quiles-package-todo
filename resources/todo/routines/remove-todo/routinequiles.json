@@ -1,19 +1,17 @@
 {
   "$schema": "http://quiles.io/v0.0.1/routine/schema#",
-  "url": "routines/new-todo/",
-  "name": "set-todo",
+  "url": "routines/remove-todo/",
+  "name": "remove-todo",
   "messages": [
     {
       "action": "request",
       "direction": "to",
-      "schema": "resource",
-      "mode": "patch"
+      "schema": "resource"
     },
     {
       "action": "result",
       "direction": "from",
-      "event": "added-todo",
-      "mode": "notify"
+      "event": "removed-todo"
     }
   ]
 }

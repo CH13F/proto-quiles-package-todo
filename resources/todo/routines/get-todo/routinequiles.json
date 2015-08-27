@@ -1,0 +1,10 @@
+{
+  "$schema": "http://quiles.io/v0.0.1/routine/schema#",
+  "url": "routines/get-todo/",
+  "name": "get-todo",
+  "entryPoint": "bin/get-todo.js",
+  "messages": [
+    { "action": "request", "direction": "to", "schema": { "$ref": "get-todo-request.schema.json" }},
+    { "action": "result", "direction": "from", "schema": "resource" }
+  ]
+}

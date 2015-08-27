@@ -38,7 +38,7 @@
     "auditFields": {
       "type": "object",
       "properties": {
-    	"uid": {
+        "uid": {
           "description": "Effective User Id",
           "type": "string",
           "maxLength": 128,

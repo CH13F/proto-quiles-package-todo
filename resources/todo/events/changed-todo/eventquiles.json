@@ -1,5 +1,7 @@
 {
   "$schema": "http://quiles.io/v0.0.1/event/schema#",
   "url": "events/added-todo/",
-  "name": "added",
+  "name": "added-todo",
+  "schema": "resource",
+  "modes": [ "all" ]
 }
