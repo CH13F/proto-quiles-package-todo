@@ -3,15 +3,7 @@
   "url": "routines/remove-todo/",
   "name": "remove-todo",
   "messages": [
-    {
-      "action": "request",
-      "direction": "to",
-      "schema": "resource"
-    },
-    {
-      "action": "result",
-      "direction": "from",
-      "event": "removed-todo"
-    }
+    { "action": "request", "direction": "to", "schema": { "$ref": "remove-todo-request.schema.json" }},
+    { "action": "result", "direction": "from", "event": "removed-todo" }
   ]
 }
