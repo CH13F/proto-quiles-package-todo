@@ -1,0 +1,9 @@
+{
+  "$schema": "http://quiles.io/v0.0.1/routine/schema#",
+  "url": "routines/purge-todo/",
+  "name": "purge-todo",
+  "messages": [
+    { "action": "request", "direction": "to", "schema": { "$ref": "purge-todo-request.schema.json" }},
+    { "action": "result", "direction": "from", "schema": "result" }
+  ]
+}

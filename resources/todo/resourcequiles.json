@@ -1,0 +1,36 @@
+{
+  "$schema": "http://quiles.io/v0.0.1/resource/schema#",
+  "url": "resources/todo",
+  "name": "todo",
+  "schema": { "$ref": "todo.schema.json" },
+  "version": "v0.1.0",
+  "routines": [
+    "routines/new-todo/",
+    "routines/set-todo/",
+    "routines/get-todo/",
+    "routines/remove-todo/",
+    "routines/purge-todo/"
+  ],
+  "messages": {
+    "POST": {
+      "routine": "new-todo",
+      "request": { "action": "request" },
+      "response": { "action": "result", "mode": "notify" }
+    },
+    "GET": {
+      "routine": "get-todo",
+      "request": { "action": "request" },
+      "response": { "action": "result" }
+    },
+    "PATCH": {
+      "routine": "set-todo",
+      "request": { "action": "request", "mode": "patch" },
+      "response": { "action": "result", "mode": "notify" }
+    },
+    "DELETE": {
+      "routine": "remove-todo",
+      "request": { "action": "request" },
+      "response": { "action": "result", "mode": "notify" }
+    }
+  }
+}

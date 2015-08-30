@@ -1,0 +1,10 @@
+{
+  "$schema": "http://quiles.io/v0.0.1/routine/schema#",
+  "url": "routines/new-todo/",
+  "name": "new-todo",
+  "entryPoint": "bin/new-todo.js",
+  "messages": [
+    { "action": "request", "direction": "to", "schema": "resource" },
+    { "action": "result", "direction": "from", "event": "added-todo" }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  
+  "title": "ITodo",
+  "description": "A TODO entry",
+  "type": "object",
+  "allOf": [
+	  {
+      "properties": {
+        "id": {
+          "description": "Unique identifier for the todo record",
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "text": {
+          "description": "The todo entry text",
+          "type": "string",
+          "maxLength": 512,
+          "minLength": 1
+        },
+        "completed": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [ "text" ]
+	  },
+    { "$ref": "#/definitions/auditFields" }
+  ],
+  
+  "definitions": {
+    "iso6801DateFormat": {
+      "description": "ISO 8601 date schema validation from http://grokbase.com/t/gg/json-schema/1425j4g1s2/full-iso-8601-date-support#20140226cqv4fagwhhblkcvh33jrtuklai",
+      "type": "string",
+      "pattern": "^([\\+-]?\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
+    },
+    "auditFields": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "description": "Effective User Id",
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "impid": {
+          "description": "Impersonating User Id",
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "depid": {
+          "description": "Deputy (service account) User Id",
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "createdate": { "$ref": "#/definitions/iso6801DateFormat" },
+        "modifieddate": { "$ref": "#/definitions/iso6801DateFormat" }
+      },
+      "required": [ "uid", "createdate", "modifieddate" ]
+    }
+  }
+}
