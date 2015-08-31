@@ -32,5 +32,13 @@
       "request": { "action": "request" },
       "response": { "action": "result", "mode": "notify" }
     }
-  }
+  },
+  "events": [
+    "events/added-todo",
+    "events/changed-todo",
+    "events/removed-todo"
+  ],
+  "converters": [
+    "converters/v0.0.1"
+  ]
 }

@@ -2,6 +2,7 @@
   "$schema": "http://quiles.io/v0.0.1/routine/schema#",
   "url": "routines/set-todo/",
   "name": "set-todo",
+  "entryPoint": "bin/set-todo.js",
   "messages": [
     { "action": "request", "direction": "to", "schema": "resource", "mode": "patch"},
     { "action": "result", "direction": "from", "event": "changed-todo" }
