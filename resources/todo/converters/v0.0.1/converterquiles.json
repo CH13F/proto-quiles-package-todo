@@ -5,27 +5,22 @@
   "schemas": [
       {
         "schema": "result",
-        "modes": [ "all" ],
         "entryPoint": "bin/convert.js"
       },
       {
         "schema": "resource",
-        "modes": [ "all" ],
         "entryPoint": "bin/convert.js"
       },
       {
         "schema": { "$ref": "../../routines/get-todo/get-todo-request.schema.json" },
-        "modes": [ "all" ],
         "entryPoint": "bin/convert.js"
       },
       {
         "schema": { "$ref": "../../routines/purge-todo/purge-todo-request.schema.json" },
-        "modes": [ "all" ],
         "entryPoint": "bin/convert.js"
       },
       {
         "schema": { "$ref": "../../routines/remove-todo/remove-todo-request.schema.json" },
-        "modes": [ "all" ],
         "entryPoint": "bin/convert.js"
       }
   ] 
